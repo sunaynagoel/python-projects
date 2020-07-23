@@ -18,7 +18,7 @@ print("Winning Rules of the Rock paper scissor game as follows: \n"
 def game():
     print("Enter choice \n 1. Rock \n 2. Paper \n 3. Scissor \n")
     # take the input from user
-    choice = int(input("User turn: "))
+    choice = int(input("User turn, enter a number between 1 and 3: "))
 
     # looping until user enter invalid input
     while choice > 3 or choice < 1:
@@ -85,8 +85,18 @@ def game():
             break
         elif ans.lower() == "yes" or ans.lower() == "y":
              game()
-        else:
-            print("Invalid Input !!")
+        elif ans.lower() != "yes" or ans.lower() != "y" or ans.lower() == "no" or ans.lower() == "n":
+            print("Invalid Input, Please enter yes or no !!")
+            ans = input("\nDo you want to play again? Enter Yes or No: ")
+            if ans.lower() == "no" or ans.lower() == "n":
+                print("Thanks for playing !!")
+                break
+            elif ans.lower() == "yes" or ans.lower() == "y":
+                game()
+            else:
+                break
+
+
 
 
 game()
