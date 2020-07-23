@@ -105,7 +105,7 @@ def game():
             elif ans.lower() == "yes" or ans.lower() == "y":
                 game()
                 break
-            elif ans.lower() != "no" and ans.lower() != "n" and ans.lower() != "yes" and ans.lower() != "y":
+            elif ans.lower() != "no" or ans.lower() != "n" or ans.lower() != "yes" or ans.lower() != "y":
                 print("Wrong input, try again later!")
                 break
             else:
